@@ -61,6 +61,7 @@ git clone github.com/294Ryan/MusicDownloader.git
   - FFmpeg: 請至<https://share.google/977WgCDSa2UqLznsR>下載，複製其中`\bin`資料夾至開發目錄下。或將複製到本地的倉庫中的`ffmpeg_bin.zip`解壓縮以使用。
 5. 使用技術: 請參見[使用技術](#🛠使用技術)
 6. 專案結構: 請參見[專案結構](#🗂專案結構)
+7. 編譯執行檔: 使用*Pyinstaller*進行打包時，可參考其對應的`.spec`檔案，對其做適當修改後而執行指令
 
 
 ## **🛠使用技術**
@@ -164,6 +165,8 @@ git clone github.com/294Ryan/MusicDownloader.git
 5. Technologies Used: Please refer to [Technologies Used](#🛠technologies-used)
 
 6. Project Structure: Please refer to [Project Structure](#🗂project-structure)
+
+7. Compile executable file: When packaging using *PyInstaller*, you can refer to its corresponding `.spec` file, make appropriate modifications, and then execute the instructions.
 
 
 ## **🛠Technologies Used**
