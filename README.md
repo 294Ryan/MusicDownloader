@@ -3,12 +3,12 @@
 # ***YT音樂下載器***
 
 ## **📜目錄**
-- [專案概述](#✏️專案概述)
-- [重點特色](#✨重點特色)
-- [使用說明](#📜使用說明)
-- [開發須知](#💻開發須知)
-- [使用技術](#🛠使用技術)
-- [備註](#ℹ️備註)
+- [專案概述](#專案概述)
+- [重點特色](#重點特色)
+- [使用說明](#使用說明)
+- [開發須知](#開發須知)
+- [使用技術](#使用技術)
+- [備註](#備註)
 
 
 ## **✏️專案概述**
@@ -88,12 +88,12 @@ git clone github.com/294Ryan/MusicDownloader.git
 # ***YT Music Downloader***
 
 ## **📜Table of Contents**
-- [Project Overview](#✏️project-overview)
-- [Key Features](#✨key-features)
-- [Usage Guide](#✅️usage-guide)
-- [Development Notes](#💻development-notes)
-- [Technologies Used](#🛠technologies-used)
-- [Notes](#ℹ️notes)
+- [Project Overview](#project-overview)
+- [Key Features](#key-features)
+- [Usage Guide](#usage-guide)
+- [Development Notes](#development-notes)
+- [Technologies Used](#technologies-used)
+- [Notes](#notes)
 
 
 ## **✏️Project Overview**
