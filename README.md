@@ -56,7 +56,7 @@ git clone github.com/294Ryan/MusicDownloader.git
 4. 安裝必要工具:
   - Python模組: 請運行以下指令
     ```
-    pip install yt_dlp treading
+    pip install yt_dlp threading
     ```
   - FFmpeg: 請至<https://share.google/977WgCDSa2UqLznsR>下載，複製其中`\bin`資料夾至開發目錄下。或將複製到本地的倉庫中的`ffmpeg_bin.zip`解壓縮以使用。
 5. 使用技術: 請參見[使用技術](#🛠使用技術)
