@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='musicDownloader_v2.3',
+    name='v2.3/musicDownloader_v2.3',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -35,5 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['musicdownloader_icon.ico'],
+    icon=['/icons/icon_v2.ico'],
 )
