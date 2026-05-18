@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['ytmp3downloader.py'],
+    ['v1.1/ytmp3downloader_v1.1.py'],
     pathex=[],
     binaries=[],
     datas=[],
