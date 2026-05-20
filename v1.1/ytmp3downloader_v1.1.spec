@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='ytmp3downloader',
+    name='ytmp3downloader_v1.1',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
