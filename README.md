@@ -79,7 +79,7 @@ git clone github.com/294Ryan/MusicDownloader.git
 - `ffmpeg_bin.zip`: `ffmpeg/bin/`之壓縮檔
 
 ## **ℹ️備註**
-- 維護者: 294Ryan - [Github](github.com/294Ryan)
+- 維護者: 294Ryan - [Github](https://github.com/294Ryan)
 - 使用條款: `MIT license`
 - ⚠️本專案供教育研究使用，使用時請尊重所有版權與權利擁有者。
 任何因不當使用造成的後果請自負。
