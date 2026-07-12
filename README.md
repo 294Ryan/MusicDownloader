@@ -1,8 +1,8 @@
-◽️[中文](#音樂下載器)    ◽️[English](#music-downloader)
+■[中文](#音樂下載器)    ■[English](#music-downloader)
 
 # ***音樂下載器***
 
-## **📜目錄**
+## **目錄**
 - [專案概述](#專案概述)
 - [重點特色](#重點特色)
 - [使用說明](#使用說明)
@@ -12,11 +12,11 @@
 - [備註](#備註)
 
 
-## **✏️專案概述**
+## **專案概述**
 Tkinter GUI應用程式，下載YouTube影片並自動轉檔成`.mp3`。
 
 
-## **✨重點特色**
+## **重點特色**
 - **簡潔的GUI**介面，易於使用
 - 自動**裁剪URL**，僅下載當前影片音訊，而非整個播放清單
 - 可自訂下載目的資料夾
@@ -26,7 +26,7 @@ Tkinter GUI應用程式，下載YouTube影片並自動轉檔成`.mp3`。
 - `.exe`執行檔**內置`ffmpeg`工具**，無需額外下載其他工具
 
 
-## **✅️使用說明**
+## **使用說明**
 請先下載Release的內容
 - 啟動: 執行`musicDownloader_v2.4.exe`
 - 功能介紹:
@@ -45,7 +45,7 @@ Tkinter GUI應用程式，下載YouTube影片並自動轉檔成`.mp3`。
    若網址輸入有誤，會跳出 *無法下載* 的警告提示框，請依照提示重新輸入網址並再試一次。
 
 
-## **💻開發須知**
+## **開發須知**
 1. 請先閱讀下述開發規範
 2. 複製此倉庫至本地電腦:
 ```
@@ -61,22 +61,22 @@ git clone github.com/294Ryan/MusicDownloader.git
      pip install -r requirements.txt
      ```
    - FFmpeg: 請至<https://share.google/977WgCDSa2UqLznsR>下載，或將倉庫中的`ffmpeg_bin.zip`解壓縮，取得`ffmpeg_bin`資料夾並放置於專案根目錄下。
-5. 使用技術: 請參見[使用技術](#🛠使用技術)
-6. 專案結構: 請參見[專案結構](#🗂專案結構)
+5. 使用技術: 請參見[使用技術](#使用技術)
+6. 專案結構: 請參見[專案結構](#專案結構)
 7. 編譯執行檔: 使用*PyInstaller*搭配`main.spec`進行打包
    ```
    pyinstaller main.spec
    ```
 
 
-## **🛠使用技術**
+## **使用技術**
 - *Tkinter*: 撰寫GUI架構
 - *yt-dlp*: 執行下載工作
 - *多執行緒*: 使用多執行緒分配下載任務，避免視窗沒有回應
 - *FFmpeg*: 負責轉檔工作，內置於`.exe`內
 
 
-## **🗂專案結構**
+## **專案結構**
 ```
 musicDownloader/
 ├─ .gitignore
@@ -90,17 +90,17 @@ musicDownloader/
 ```
 
 
-## **ℹ️備註**
+## **備註**
 - 維護者: 294Ryan - [Github](https://github.com/294Ryan)
 - 使用條款: `MIT license`
-- ⚠️本專案供教育研究使用，使用時請尊重所有版權與權利擁有者。
+- [!] 本專案供教育研究使用，使用時請尊重所有版權與權利擁有者。
 任何因不當使用造成的後果請自負。
 
 
 ---
 # ***Music Downloader***
 
-## **📜Table of Contents**
+## **Table of Contents**
 - [Project Overview](#project-overview)
 - [Key Features](#key-features)
 - [Usage Guide](#usage-guide)
@@ -110,11 +110,11 @@ musicDownloader/
 - [Notes](#notes)
 
 
-## **✏️Project Overview**
+## **Project Overview**
 A Tkinter GUI application that downloads YouTube videos and automatically converts them into `.mp3` files.
 
 
-## **✨Key Features**
+## **Key Features**
 - Clean and user-friendly **GUI** interface
 - Automatically **trims URLs** to download only the current video's audio instead of the entire playlist
 - Customizable download destination folder
@@ -124,7 +124,7 @@ A Tkinter GUI application that downloads YouTube videos and automatically conver
 - The `.exe` executable comes with a built-in **`ffmpeg` tool**, so no additional installation is required
 
 
-## **✅️Usage Guide**
+## **Usage Guide**
 Please download the files from the Release section first.
 
 - Launch: Run `musicDownloader_v2.4.exe`
@@ -151,7 +151,7 @@ Please download the files from the Release section first.
    If the URL is invalid, a warning message box saying *Download Failed* will appear. Please follow the instructions and try again.
 
 
-## **💻Development Notes**
+## **Development Notes**
 1. Please read the Development Guidelines below.
 2. Clone this repository to your local machine:
 ```
@@ -171,22 +171,22 @@ git clone github.com/294Ryan/MusicDownloader.git
 
      Download it from <https://share.google/977WgCDSa2UqLznsR>, or extract `ffmpeg_bin.zip` from this repository and place the resulting `ffmpeg_bin` folder in the project root.
 
-5. Technologies Used: Please refer to [Technologies Used](#🛠technologies-used)
-6. Project Structure: Please refer to [Project Structure](#🗂project-structure)
+5. Technologies Used: Please refer to [Technologies Used](#technologies-used)
+6. Project Structure: Please refer to [Project Structure](#project-structure)
 7. Compile executable file: Package with *PyInstaller* using `main.spec`
    ```
    pyinstaller main.spec
    ```
 
 
-## **🛠Technologies Used**
+## **Technologies Used**
 - *Tkinter*: Used for building the GUI interface
 - *yt-dlp*: Handles video downloading
 - *Multithreading*: Prevents the window from freezing while downloading
 - *FFmpeg*: Handles file conversion and is bundled inside the `.exe` executable
 
 
-## **🗂Project Structure**
+## **Project Structure**
 ```
 musicDownloader/
 ├─ .gitignore
@@ -200,8 +200,8 @@ musicDownloader/
 ```
 
 
-## **ℹ️Notes**
+## **Notes**
 - Maintainer: 294Ryan - [GitHub](https://github.com/294Ryan)
 - License: `MIT License`
-- ⚠️ This project is intended for educational and research purposes only. Please respect all copyrights and rights holders when using this software.
+- [!] This project is intended for educational and research purposes only. Please respect all copyrights and rights holders when using this software.
 Any consequences caused by improper use are the user's own responsibility.
