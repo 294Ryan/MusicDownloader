@@ -27,7 +27,7 @@ Tkinter GUI應用程式，下載YouTube影片並自動轉檔成`.mp3`。
 
 
 ## **使用說明**
-請先下載Release的內容
+請先下載[Release](https://github.com/294Ryan/MusicDownloader/releases)的內容
 - 啟動: 執行`musicDownloader_v2.4.exe`
 - 功能介紹:
 
@@ -125,7 +125,7 @@ A Tkinter GUI application that downloads YouTube videos and automatically conver
 
 
 ## **Usage Guide**
-Please download the files from the Release section first.
+Please download the files from the [Release](https://github.com/294Ryan/MusicDownloader/releases) section first.
 
 - Launch: Run `musicDownloader_v2.4.exe`
 - Feature Guide:
