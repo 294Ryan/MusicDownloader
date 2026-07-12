@@ -60,7 +60,7 @@ git clone github.com/294Ryan/MusicDownloader.git
      ```
      pip install -r requirements.txt
      ```
-   - FFmpeg: 請至<https://share.google/977WgCDSa2UqLznsR>下載，或將倉庫中的`ffmpeg_bin.zip`解壓縮，取得`ffmpeg_bin`資料夾並放置於專案根目錄下。
+   - FFmpeg: 請至<https://www.ffmpeg.org/download.html>下載，或將倉庫中的`ffmpeg_bin.zip`解壓縮，取得`ffmpeg_bin`資料夾並放置於專案根目錄下。
 5. 使用技術: 請參見[使用技術](#使用技術)
 6. 專案結構: 請參見[專案結構](#專案結構)
 7. 編譯執行檔: 使用*PyInstaller*搭配`main.spec`進行打包
@@ -169,7 +169,7 @@ git clone github.com/294Ryan/MusicDownloader.git
      ```
    - FFmpeg:
 
-     Download it from <https://share.google/977WgCDSa2UqLznsR>, or extract `ffmpeg_bin.zip` from this repository and place the resulting `ffmpeg_bin` folder in the project root.
+     Download it from <https://www.ffmpeg.org/download.html>, or extract `ffmpeg_bin.zip` from this repository and place the resulting `ffmpeg_bin` folder in the project root.
 
 5. Technologies Used: Please refer to [Technologies Used](#technologies-used)
 6. Project Structure: Please refer to [Project Structure](#project-structure)
