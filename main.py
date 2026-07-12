@@ -1,12 +1,20 @@
-#---------v2.3---------#
+"""
+*** Version 2.4.0 ***
+# v 1.1
+- 處理yt網址出現&list=...會把整個播放清單都下載的問題
+- 會找到出現"&"的索引 並只取其索引前的網址作為下載用的網址(只下載1個檔案)
 
-# 處理yt網址出現&list=...會把整個播放清單都下載的問題 (v1.1)
-# 會找到出現"&"的索引 並只取其索引前的網址作為下載用的網址(只下載1個檔案) (v1.1)
+# v 2.3
+- 優化UI 新增按鍵: 選擇 開啟資料夾 清除 貼上url
+- 新增進度條
+- 用Thread寫 避免視窗"沒有回應"
+- 把 ffmpeg/bin 資料夾複製成 ffmpeg_bin 放在cwd資料夾底下 (提高可攜性)
 
-# 優化UI 新增按鍵: 選擇 開啟資料夾 清除 貼上url (v2.3)
-# 新增進度條 (v2.3)
-# 用Thread寫 避免視窗"沒有回應" (v2.3)
-# 把 ffmpeg/bin 資料夾複製成 ffmpeg_bin 放在cwd資料夾底下 (提高可攜性) (v2.3)
+# v 2.4
+- 更新yt_dlp以修正下載錯誤 
+- options加上 quickjs
+"""
+
 
 import tkinter as tk
 from tkinter import ttk
@@ -42,11 +50,13 @@ def download_task(_url):
         url=url[:index]  #v1.1新增
         print(f"New url(singal file) is : {url}")  #v1.1新增
 
-    options = { # yt-dlp 下載參數
+    options = {    # yt-dlp 下載參數
         'format': 'bestaudio/best',
         'outtmpl': os.path.join(download_folder, '%(title)s.%(ext)s'),  # 儲存位置與檔名
         'ffmpeg_location': resource_path('ffmpeg_bin'),  # ffmpeg 路徑
         'progress_hooks': [progress_hook],   # 進度條
+        'javascript_runtimes': ['quickjs'],  # 負責解密 加速 (v2.4)
+        # 'cookiesfrombrowser': ('chrome',),   # 可依需求換成 edge 或 firefox (v2.4)
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
             'preferredcodec': 'mp3',

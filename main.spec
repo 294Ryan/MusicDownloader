@@ -2,11 +2,11 @@
 
 
 a = Analysis(
-    ['ytmp3downloader.py'],
+    ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[],
-    hiddenimports=['yt_dlp'],
+    datas=[('ffmpeg_bin', 'ffmpeg_bin')],
+    hiddenimports=['quickjs', 'quickjs_ng'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='ytmp3downloader',
+    name='musicDownloader_v2.4',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -35,5 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['icon.ico'],
+    icon=['icon_v2.ico'],
 )
