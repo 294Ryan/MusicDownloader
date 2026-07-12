@@ -35,5 +35,9 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+<<<<<<< HEAD:main.spec
     icon=['icon_v2.ico'],
+=======
+    icon=['/icons/icon_v2.ico'],
+>>>>>>> 1639c3114f6f03f9700090c9d53a3988d6932fb2:v2.3/musicDownloader_v2.3.spec
 )
