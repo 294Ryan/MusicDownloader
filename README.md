@@ -1,6 +1,6 @@
-◽️[中文](#yt音樂下載器)    ◽️[English](#yt-music-downloader)
+◽️[中文](#音樂下載器)    ◽️[English](#music-downloader)
 
-# ***YT音樂下載器***
+# ***音樂下載器***
 
 ## **📜目錄**
 - [專案概述](#專案概述)
@@ -8,16 +8,17 @@
 - [使用說明](#使用說明)
 - [開發須知](#開發須知)
 - [使用技術](#使用技術)
+- [專案結構](#專案結構)
 - [備註](#備註)
 
 
 ## **✏️專案概述**
-採用簡潔的Tkinter GUI讓使用者下載YouTube影片並自動轉檔成`.mp3`。
+Tkinter GUI應用程式，下載YouTube影片並自動轉檔成`.mp3`。
 
 
 ## **✨重點特色**
 - **簡潔的GUI**介面，易於使用
-- 自動**裁剪URL**，僅下載當前影片音訊，而非下載整個播放清單
+- 自動**裁剪URL**，僅下載當前影片音訊，而非整個播放清單
 - 可自訂下載目的資料夾
 - 下載指定連結的YouTube影片並**自動轉檔**成`.mp3`檔案
 - 支援一鍵**貼上/清除**URL填寫框
@@ -27,56 +28,67 @@
 
 ## **✅️使用說明**
 請先下載Release的內容
-- 啟動: 執行`.exe`檔案，如`ytmp3downloader_vX.X`或`musicDownloader_vX.X`
-- 功能介紹: 
+- 啟動: 執行`musicDownloader_v2.4.exe`
+- 功能介紹:
+
 1. *輸入YT影片URL:*
-    於`YouTube網址`輸入框輸入網址或點選右方的`貼上`鍵直接從剪貼簿貼上。
-    
+    於`YouTube網址`輸入框輸入網址，或點選右方的`貼上`鍵直接從剪貼簿貼上。
+
 2. *指定下載目的資料夾:*
     存檔路徑預設為電腦的`下載`資料夾。
     點選視窗中間右側的`選擇`鍵可自選電腦內的指定資料夾為目的資料夾。
     點選`開啟資料夾`鍵自動開啟指定或預設之目的資料夾。
 
 3. *開始下載:*
-   點選視窗中的`下載影片`鍵會分配一執行緒執行下載影片之任務，並將其轉檔成`.mp3`檔案，將其存放在指定或預設的目的資料夾。
+   點選視窗中的`下載影片`鍵會分配一執行緒執行下載影片之任務，並將其轉檔成`.mp3`檔案，存放在指定或預設的目的資料夾。
    下載過程中會依序出現 *準備開始下載* *下載進度* *下載完成* 等提示內容。
    若網址輸入有誤，會跳出 *無法下載* 的警告提示框，請依照提示重新輸入網址並再試一次。
 
-              
+
 ## **💻開發須知**
 1. 請先閱讀下述開發規範
-2. 請運行已下指令複製此倉庫至您的本地電腦: 
+2. 複製此倉庫至本地電腦:
 ```
 cd 目錄
 git clone github.com/294Ryan/MusicDownloader.git
 ```
 3. 使用語言:
-   - Python3.13
-   
+   - Python 3.13
+
 4. 安裝必要工具:
-  - Python模組: 請運行以下指令
-    ```
-    pip install yt_dlp
-    ```
-  - FFmpeg: 請至<https://share.google/977WgCDSa2UqLznsR>下載，複製其中`\bin`資料夾至開發目錄下。或將複製到本地的倉庫中的`ffmpeg_bin.zip`解壓縮以使用。
+   - Python模組: 請運行以下指令
+     ```
+     pip install -r requirements.txt
+     ```
+   - FFmpeg: 請至<https://share.google/977WgCDSa2UqLznsR>下載，或將倉庫中的`ffmpeg_bin.zip`解壓縮，取得`ffmpeg_bin`資料夾並放置於專案根目錄下。
 5. 使用技術: 請參見[使用技術](#🛠使用技術)
 6. 專案結構: 請參見[專案結構](#🗂專案結構)
-7. 編譯執行檔: 使用*Pyinstaller*進行打包時，可參考其對應的`.spec`檔案，對其做適當修改後而執行指令
+7. 編譯執行檔: 使用*PyInstaller*搭配`main.spec`進行打包
+   ```
+   pyinstaller main.spec
+   ```
 
 
 ## **🛠使用技術**
-- *Tkinter*： 撰寫GUI架構
+- *Tkinter*: 撰寫GUI架構
 - *yt-dlp*: 執行下載工作
-- *多執行緒*： 使用多執行緒分配下載任務，避免視窗沒有回應
-- *FFmpeg*: 負責轉檔工作，內置與`.exe`內
+- *多執行緒*: 使用多執行緒分配下載任務，避免視窗沒有回應
+- *FFmpeg*: 負責轉檔工作，內置於`.exe`內
 
 
 ## **🗂專案結構**
-- `icons/`: 存放各版本`.ico`檔案
-- `vX.X/`: 版本vX.X的內容
-  - `ytmp3downloader_vX.X.py`或`musicDownloader_vX.X.py`: 各版本的主要`.py`程式檔
-  - `ytmp3downloader_vX.X.py`或`musicDownloader_vX.X.py`: 各版本的`.spec`檔案(由Pyinstaller產生)
-- `ffmpeg_bin.zip`: `ffmpeg/bin/`之壓縮檔
+```
+musicDownloader/
+├─ .gitignore
+├─ ffmpeg_bin.zip      # ffmpeg/bin 之壓縮檔
+├─ icon_v2.ico         # 執行檔圖示
+├─ LICENSE
+├─ main.py             # 主程式
+├─ main.spec           # PyInstaller 打包設定檔
+├─ README.md
+└─ requirements.txt    # 開發環境所需套件
+```
+
 
 ## **ℹ️備註**
 - 維護者: 294Ryan - [Github](https://github.com/294Ryan)
@@ -86,7 +98,7 @@ git clone github.com/294Ryan/MusicDownloader.git
 
 
 ---
-# ***YT Music Downloader***
+# ***Music Downloader***
 
 ## **📜Table of Contents**
 - [Project Overview](#project-overview)
@@ -94,11 +106,12 @@ git clone github.com/294Ryan/MusicDownloader.git
 - [Usage Guide](#usage-guide)
 - [Development Notes](#development-notes)
 - [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
 - [Notes](#notes)
 
 
 ## **✏️Project Overview**
-A simple and clean Tkinter GUI application that allows users to download YouTube videos and automatically convert them into `.mp3` files.
+A Tkinter GUI application that downloads YouTube videos and automatically converts them into `.mp3` files.
 
 
 ## **✨Key Features**
@@ -114,8 +127,7 @@ A simple and clean Tkinter GUI application that allows users to download YouTube
 ## **✅️Usage Guide**
 Please download the files from the Release section first.
 
-- Launch: Run the `.exe` file such as `ytmp3downloader_vX.X` or `musicDownloader_vX.X`
-
+- Launch: Run `musicDownloader_v2.4.exe`
 - Feature Guide:
 
 1. *Enter a YouTube Video URL:*
@@ -126,13 +138,13 @@ Please download the files from the Release section first.
 
    The default save location is your computer's `Downloads` folder.
 
-   Click the `Select` button on the right side of the window to choose a custom destination folder on your computer.
+   Click the `Select` button on the right side of the window to choose a custom destination folder.
 
    Click the `Open Folder` button to automatically open the selected or default destination folder.
 
 3. *Start Downloading:*
 
-   Click the `Download Video` button in the window to create a thread for downloading the video and converting it into an `.mp3` file. The file will then be saved in the selected or default destination folder.
+   Click the `Download Video` button to start a background thread that downloads the video and converts it into an `.mp3` file, saved to the selected or default destination folder.
 
    During the download process, messages such as *Preparing Download*, *Download Progress*, and *Download Complete* will appear in sequence.
 
@@ -141,7 +153,7 @@ Please download the files from the Release section first.
 
 ## **💻Development Notes**
 1. Please read the Development Guidelines below.
-2. Run the following commands to clone this repository to your local machine:
+2. Clone this repository to your local machine:
 ```
 cd directory
 git clone github.com/294Ryan/MusicDownloader.git
@@ -152,21 +164,19 @@ git clone github.com/294Ryan/MusicDownloader.git
 
 4. Install Required Tools:
    - Python modules: Run the following command
-   ```
-   pip install yt_dlp
-   ```
-
+     ```
+     pip install -r requirements.txt
+     ```
    - FFmpeg:
 
-     Please download it from <https://share.google/977WgCDSa2UqLznsR>, then copy the `\bin` folder into the project directory.
-
-     Alternatively, extract `ffmpeg_bin.zip` from the cloned repository and use it directly.
+     Download it from <https://share.google/977WgCDSa2UqLznsR>, or extract `ffmpeg_bin.zip` from this repository and place the resulting `ffmpeg_bin` folder in the project root.
 
 5. Technologies Used: Please refer to [Technologies Used](#🛠technologies-used)
-
 6. Project Structure: Please refer to [Project Structure](#🗂project-structure)
-
-7. Compile executable file: When packaging using *PyInstaller*, you can refer to its corresponding `.spec` file, make appropriate modifications, and then execute the instructions.
+7. Compile executable file: Package with *PyInstaller* using `main.spec`
+   ```
+   pyinstaller main.spec
+   ```
 
 
 ## **🛠Technologies Used**
@@ -177,11 +187,17 @@ git clone github.com/294Ryan/MusicDownloader.git
 
 
 ## **🗂Project Structure**
-- `icons/`: Stores version-specific `.ico` files
-- `vX.X/`: Contents for version vX.X
-  - `ytmp3downloader_vX.X.py` or `musicDownloader_vX.X.py`: Main `.py` source file for each version
-  - `ytmp3downloader_vX.X.spec` or `musicDownloader_vX.X.spec`: `.spec` file for each version (generated by PyInstaller)
-- `ffmpeg_bin.zip`: Compressed archive of `ffmpeg/bin/`
+```
+musicDownloader/
+├─ .gitignore
+├─ ffmpeg_bin.zip      # Compressed archive of ffmpeg/bin
+├─ icon_v2.ico         # Executable icon
+├─ LICENSE
+├─ main.py             # Main program
+├─ main.spec           # PyInstaller build configuration
+├─ README.md
+└─ requirements.txt    # Dependencies required for development
+```
 
 
 ## **ℹ️Notes**
